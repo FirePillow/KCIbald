@@ -100,12 +100,6 @@ let config = {
 
         new NoGlue(),
 
-        new webpack.ProvidePlugin({
-            $:"jquery",
-            Jquery:"jquery",
-            "window.jQuery":"jquery"
-        })
-
     ],
 
 };
@@ -125,11 +119,11 @@ module.exports = (env, argv) => {
         config.mode = 'production';
         let basePath = 'dist';
         let pathName = basePath + '/assets';
-        let htmlPath = basePath + '/htmls';
+        let htmlPath = basePath + '/html';
         let reportPath = 'reports';
         config.output.path = path.resolve(__dirname, pathName);
         config.output.html = htmlPath;
-        config.output.publicPath = `https://cdn.jsdelivr.net/gh/ProjectFK/Blog-Frontend@${version}/${pathName}/`;
+        config.output.publicPath = `https://cdn.jsdelivr.net/gh/ProjectFK/KCIbald@${version}/${pathName}/`;
         config.optimization = {
             minimizer: [
                 new MinifyPlugin(),

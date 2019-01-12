@@ -13,14 +13,14 @@
     "url": "git+https://github.com/ProjectFK/KCIbald.git"
   },
   "author": "FirePillow",
-  "license": "",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ProjectFK/KCIbald/issues"
   },
   "homepage": "https://github.com/ProjectFK/KCIbald#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.0.0-beta.50",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
