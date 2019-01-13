@@ -29,7 +29,8 @@ let config = {
     // Well... Entries
     // Logic below will automatically add HTMLPlugin about index.html within the same folder if the file exists
     entry: {
-        index: './index/app.js'
+        index: './index/app.js',
+        '404': './404/app.js'
     },
 
     output: {
@@ -159,7 +160,12 @@ module.exports = (env, argv) => {
             let contentPath = path.dirname(config.entry[entryName]) + "/index.html";
             let outputPath;
             if (config.output.html) {
-                outputPath = path.resolve(__dirname, config.output.html, entryName, "index.html")
+                if (entryName === 'index') {
+                    outputPath = path.resolve(__dirname, config.output.html, "index.html");
+                    console.warn("index entry merged to root output folder, conflict may happen!")
+                } else {
+                    outputPath = path.resolve(__dirname, config.output.html, entryName, "index.html")
+                }
             } else {
                 outputPath = contentPath;
             }
