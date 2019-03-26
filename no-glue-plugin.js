@@ -69,10 +69,10 @@ let a = class NoGluePlugin {
     };
 
     static isGlue(content) {
-        let lineSpliter = content.indexOf('\n');
+        let lineSplitter = content.indexOf('\n');
         let firstLine;
-        if (lineSpliter !== -1)
-            firstLine = content.substring(0, lineSpliter);
+        if (lineSplitter !== -1)
+            firstLine = content.substring(0, lineSplitter);
         else
             firstLine = content;
         let b = firstLine.includes('\"glue\"');

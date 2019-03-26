@@ -19,6 +19,7 @@ let WebpackSubresourceIntegrityPlugin = require('webpack-subresource-integrity')
 // Bundle analyzer
 let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 let NoGlue = require('./no-glue-plugin');
+let googleanalytics = require('./google-analytics-inject-plugin');
 
 const faviconPath = "\\common\\favicon.ico";
 
@@ -101,6 +102,7 @@ let config = {
 
         new NoGlue(),
 
+        new googleanalytics()
     ],
 
 };
