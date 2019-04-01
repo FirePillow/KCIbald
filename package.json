@@ -1,6 +1,6 @@
 {
   "name": "kcibald",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "scripts": {
     "dev": "webpack-dev-server",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProjectFK/KCIbald.git"
+    "url": "git+https://github.com/FirePillow/KCIbald.git"
   },
   "author": "FirePillow",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ProjectFK/KCIbald/issues"
+    "url": "https://github.com/FirePillow/KCIbald/issues"
   },
-  "homepage": "https://github.com/ProjectFK/KCIbald#readme",
+  "homepage": "https://github.com/FirePillow/KCIbald#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.2.3",

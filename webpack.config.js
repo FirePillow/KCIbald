@@ -1,7 +1,6 @@
 let path = require('path');
 let fs = require('fs');
 let version = require('./package').version;
-let webpack = require('webpack');
 // Load vue file
 let VueLoaderPlugin = require('vue-loader/lib/plugin');
 // Copy & Load HTML
@@ -126,7 +125,7 @@ module.exports = (env, argv) => {
         let reportPath = 'reports';
         config.output.path = path.resolve(__dirname, pathName);
         config.output.html = htmlPath;
-        config.output.publicPath = `https://cdn.jsdelivr.net/gh/ProjectFK/KCIbald@${version}/${pathName}/`;
+        config.output.publicPath = `https://cdn.jsdelivr.net/gh/FirePillow/KCIbald@${version}/${pathName}/`;
         config.optimization = {
             minimizer: [
                 new MinifyPlugin(),
