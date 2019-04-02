@@ -27,7 +27,7 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-loader": "^8.0.2",
     "babel-minify-webpack-plugin": "^0.3.1",
-    "clean-webpack-plugin": "^0.1.19",
+    "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
