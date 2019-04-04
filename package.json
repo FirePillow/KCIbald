@@ -41,7 +41,7 @@
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.16.3",
     "webpack-bundle-analyzer": "^3.0.1",
-    "webpack-cdn-plugin": "^2.2.0",
+    "webpack-cdn-plugin": "^3.0.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.14",
     "webpack-subresource-integrity": "^1.1.0-rc.5"
