@@ -116,7 +116,7 @@ module.exports = (env, argv) => {
         config.mode = 'development';
         let pathName = 'build';
         config.output.path = path.resolve(__dirname, pathName);
-        config.plugins = config.plugins.concat(new CleanerPlugin([pathName]))
+        config.plugins = config.plugins.concat(new CleanerPlugin({cleanOnceBeforeBuildPatterns: pathName}))
     } else {
         config.mode = 'production';
         let basePath = 'dist';
@@ -144,9 +144,13 @@ module.exports = (env, argv) => {
                 logLevel: 'info'
             })
         ).concat(
-            new CleanerPlugin([basePath])
+            new CleanerPlugin({
+                cleanOnceBeforeBuildPatterns: reportPath
+            })
         ).concat(
-            new CleanerPlugin([reportPath])
+            new CleanerPlugin({
+                cleanOnceBeforeBuildPatterns: basePath
+            })
         )
     }
 
