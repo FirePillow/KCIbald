@@ -18,7 +18,9 @@
     "url": "https://github.com/FirePillow/KCIbald/issues"
   },
   "homepage": "https://github.com/FirePillow/KCIbald#readme",
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^6.9.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.0.0-beta.50",
