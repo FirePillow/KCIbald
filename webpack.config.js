@@ -20,7 +20,7 @@ let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlug
 let NoGlue = require('./no-glue-plugin');
 let googleanalytics = require('./google-analytics-inject-plugin');
 
-const faviconPath = "/common/favicon.ico";
+const faviconPath = "/images/favicon.ico";
 
 let config = {
 
