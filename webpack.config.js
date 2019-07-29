@@ -116,7 +116,8 @@ module.exports = (env, argv) => {
         config.mode = 'development';
         let pathName = 'build';
         config.output.path = path.resolve(__dirname, pathName);
-        config.plugins = config.plugins.concat(new CleanerPlugin({cleanOnceBeforeBuildPatterns: pathName}))
+        config.plugins = config.plugins.concat(new CleanerPlugin({cleanOnceBeforeBuildPatterns: pathName}));
+        config.output.publicPath = '/';
     } else {
         config.mode = 'production';
         let basePath = 'dist';
