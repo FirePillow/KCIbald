@@ -24,10 +24,12 @@
 
 <script>
 
+    // exactly like before
     export default {
         name: 'preposts',
         props: ['data']
     }
+
 </script>
 
 <style scoped>
