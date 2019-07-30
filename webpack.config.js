@@ -10,7 +10,7 @@ let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Reset output directory
 let CleanerPlugin = require('clean-webpack-plugin');
 // Minimize CSS
-let OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+let OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // Minimize JS
 let MinifyPlugin = require('babel-minify-webpack-plugin');
 // Inject webp support detection script to every html
@@ -20,7 +20,7 @@ let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlug
 let NoGlue = require('./no-glue-plugin');
 let googleanalytics = require('./google-analytics-inject-plugin');
 
-const faviconPath = "/images/favicon.ico";
+const faviconPath = '/images/favicon.ico';
 
 let config = {
 
@@ -29,6 +29,7 @@ let config = {
     // Well... Entries
     // Logic below will automatically add HTMLPlugin about index.html within the same folder if the file exists
     entry: {
+        open_page: './open_page/app.js',
         placeholder: './placeholder/app.js',
         '404': './404/app.js'
     },
@@ -80,7 +81,7 @@ let config = {
                         //Change back to file-loader in case it's no-glued
                         loader: 'file-loader',
                         options: {
-                            // Path includes "/" already
+                            // Path includes '/' already
                             name: '[path][name].[hash:5].[ext]',
                         }
                     }
@@ -99,9 +100,7 @@ let config = {
             filename: '[name]/[name].style[chunkhash:5].css'
         }),
 
-        new NoGlue(),
-
-        new googleanalytics()
+        new NoGlue()
     ],
 
 };
@@ -152,6 +151,8 @@ module.exports = (env, argv) => {
             new CleanerPlugin({
                 cleanOnceBeforeBuildPatterns: basePath
             })
+        ).concat(
+            new googleanalytics()
         )
     }
 
@@ -163,14 +164,14 @@ module.exports = (env, argv) => {
     for (let entryName in config.entry) {
         // For the sake of not having a warming!
         if (config.entry.hasOwnProperty(entryName)) {
-            let contentPath = path.dirname(config.entry[entryName]) + "/index.html";
+            let contentPath = path.dirname(config.entry[entryName]) + '/index.html';
             let outputPath;
             if (config.output.html) {
                 if (entryName === 'index') {
-                    outputPath = path.resolve(__dirname, config.output.html, "index.html");
-                    console.warn("index entry merged to root output folder, conflict may happen!")
+                    outputPath = path.resolve(__dirname, config.output.html, 'index.html');
+                    console.warn('index entry merged to root output folder, conflict may happen!')
                 } else {
-                    outputPath = path.resolve(__dirname, config.output.html, entryName, "index.html")
+                    outputPath = path.resolve(__dirname, config.output.html, entryName, 'index.html')
                 }
             } else {
                 outputPath = contentPath;
@@ -184,7 +185,7 @@ module.exports = (env, argv) => {
                     entryExists ? 'loaded' : 'missing',
                     'from content path:',
                     contentPath,
-                    "favicon path:",
+                    'favicon path:',
                     favicon
                 ]
                     .join(' ');
