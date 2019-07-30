@@ -32,8 +32,6 @@
         }
     ];
 
-    console.log(preposts);
-
     export default {
         name: 'app',
         components: {
