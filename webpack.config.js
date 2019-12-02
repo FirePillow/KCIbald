@@ -31,7 +31,8 @@ let config = {
     entry: {
         open_page: './open_page/app.js',
         placeholder: './placeholder/app.js',
-        '404': './404/app.js'
+        '404': './404/app.js',
+        login: './login/app.js'
     },
 
     output: {
