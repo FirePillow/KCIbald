@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/FirePillow/KCIbald#readme",
   "dependencies": {
+    "jquery": "^3.4.1",
     "layui-layer": "git+https://github.com/sentsin/layer.git",
     "npm": "^6.9.0",
     "vue": "^2.6.10"
