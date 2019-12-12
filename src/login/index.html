@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Login | KCIBALD BLOG</title>
+		<script src=https://www.recaptcha.net/recaptcha/api.js></script>
 		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 	</head>
 
@@ -12,9 +13,9 @@
 			<img id="bald" src="../images/logo.svg" alt="KCIBald!" />
 			<h1><span class="russo">KCIBALD</span> | <span class="harrington">BLOG</span></h1>
 			<div>
-				<input type="text" placeholder="User name" maxlength="25">
-				<input type="password" placeholder="Password" maxlength="30">
-				<button type="button">login</button>
+				<input type="text" placeholder="User name" maxlength="25" id="username">
+				<input type="password" placeholder="Password" maxlength="30" id="password">
+				<button type="button" id="login">login</button>
 			</div>
 		</div>
 	</body>
