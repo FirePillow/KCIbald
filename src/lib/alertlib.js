@@ -4,7 +4,7 @@ const layer = require("layui-layer");
 const exp ={};
 
 layer.config({
-    path: '/node_modules/layui-layer/src/'
+    path: 'https://cdn.jsdelivr.net/gh/sentsin/layer@3.1.1/src/'
 });
 
 function user_err(info){
