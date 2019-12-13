@@ -51,11 +51,11 @@ function loginSuccess(value) {
 }
 
 function validusr(username) {
-        return !config.doValidate || typeof username === 'string' && !(username.length > 20 || username.length < 2);
+        return username === 'string' && !(username.length > 20 || username.length < 2);
     }
 
 function validpwd(password) {
-        return !config.doValidate || typeof password === 'string' && /^(?=.*?[a-z])(?=.*?[0-9]).{8,20}$/.test(password);
+        return password === 'string' && /^(?=.*?[a-z])(?=.*?[0-9]).{8,20}$/.test(password);
 }
 
 function startLogin(token) {
@@ -67,17 +67,17 @@ function startLogin(token) {
         console.log(`login with user: ${username}, password: ${password}`);
         console.log(`recaptcha token: ${token}`);
 
-        //if (validusr(username) || validpwd.password(password)) {
-        //    alertlib.user_err("Invalid password.");
-        //    return
-        //}
+        if (validusr(username) || validpwd(password)) {
+            alertlib.user_err("Invalid username or password.");
+            return
+        }
 
         data={"account": username,"password": password,"captcha": token};
         fetch(config.apiurl,
             {body: JSON.stringify(data),
             method:"POST", cache: 'no-cache', 
             headers: {'Accept': 'application/json','Content-Type': 'application/json'},
-        }).then(value => value.success ? loginSuccess(value) : loginRequestFailed(value))
+        }).then(rsp => rsp.status==204 ? loginSuccess(rsp) : loginRequestFailed(rsp))
         .catch(exception => loginException(exception))
 
     } catch (e) {
