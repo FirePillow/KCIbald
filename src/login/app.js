@@ -47,7 +47,11 @@ function loginException(exception) {
 }
 
 function loginSuccess(value) {
-    document.write(document.cookie);
+    if(!config.ontest){
+        window.location.href="https://www.kcibald.com"
+    }else{
+        window.location.href="https://raw.develop.kcibald.com/forum/openpage/index.html"
+    }
 }
 
 function validusr(username) {
@@ -70,10 +74,10 @@ function startLogin(token) {
         if (validusr(username) || validpwd(password)) {
             alertlib.user_err("Invalid username or password.");
             return
-        }
+        };
 
         data={"account": username,"password": password,"captcha": token};
-        fetch(config.apiurl,
+        fetch(config.apiurl("login"),
             {body: JSON.stringify(data),
             method:"POST", cache: 'no-cache', 
             headers: {'Accept': 'application/json','Content-Type': 'application/json'},
