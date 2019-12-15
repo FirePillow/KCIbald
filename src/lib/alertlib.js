@@ -11,7 +11,7 @@ function user_err(info){
     layer.msg(info, {
         offset: 't',
         anim: 1,
-        time:5000000,
+        time:2000,
         //time for develop environment
         skin: 'alertlib'
     });
