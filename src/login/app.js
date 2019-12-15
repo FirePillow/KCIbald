@@ -42,7 +42,7 @@ function loginRequestFailed(failure) {
 }
 
 function loginException(exception) {
-    alertlib.unexpected_err('3333');
+    alertlib.unexpected_err('You are out of internet');
     console.log(exception);
 }
 
