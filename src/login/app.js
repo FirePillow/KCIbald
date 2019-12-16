@@ -27,13 +27,9 @@ document.onkeyup = (keyEvent) => {
         document.getElementById('login').click();
 };
 
-function recap_expired() {
-    window.location = "/login?recap=exp"
-}
+var recap_expired = () => window.location = "/login?recap=exp";
 
-function recap_error() {
-    alertlib.user_err("Internet failed! Please check your Internet.")
-}
+var recap_error = () => alertlib.user_err("Internet failed! Please check your Internet.");
 
 function loginRequestFailed(failure) {
 //    Exception logic
@@ -54,13 +50,10 @@ function loginSuccess(value) {
     }
 }
 
-function validusr(username) {
-        return username === 'string' && !(username.length > 20 || username.length < 2);
-    }
+var validusr = username => username === 'string' && !(username.length > 20 || username.length < 2);
+    
 
-function validpwd(password) {
-        return password === 'string' && /^(?=.*?[a-z])(?=.*?[0-9]).{8,20}$/.test(password);
-}
+var validpwd = password => password === 'string' && /^(?=.*?[a-z])(?=.*?[0-9]).{8,20}$/.test(password);
 
 function startLogin(token) {
     try {
