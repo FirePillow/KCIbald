@@ -16,7 +16,7 @@
     import floors from '../components/floor.vue';
 
     let ffdata = {
-        avatarurl: "../common/sampleavatar.png",
+        avatarurl: "https://dummyimage.com/70x70/6dc5d6/000000",
         badge1: "DP",
         color1: "bgred",
         badge2: "活动",
@@ -28,14 +28,14 @@
     };
 
     let floordata = [{
-        avatarurl: "../common/sampleavatar.png",
+        avatarurl: "https://dummyimage.com/70x70/6dc5d6/000000",
         title: "Battle of Bands 开始报名",
         stat: "User_Kcibald | June 25, 2019 | Tuesday",
         likecount: 128,
         body: "楼主这就是上海中学生必读书目《城南旧事》？"
     },
         {
-            avatarurl: "../common/sampleavatar.png",
+            avatarurl: "https://dummyimage.com/70x70/6dc5d6/000000",
             title: "Battle of Bands 开始报名",
             stat: "User_Kcibald | June 25, 2019 | Tuesday",
             likecount: 128,
@@ -44,7 +44,7 @@
 
     export default {
         name: "app",
-        comments:{
+        components:{
             ff,
             floors
         },
