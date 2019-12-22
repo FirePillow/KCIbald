@@ -6,7 +6,7 @@
 
 <script>
     // let preposts = require('./components/preposts.vue'); does the same thing
-    import preposts from './components/preposts.vue';
+    import preposts from '../components/preposts.vue';
 
     let datalist = [
         {
