@@ -34,7 +34,7 @@ let config = {
         placeholder: './placeholder/app.js',
         '404': './404/app.js',
         login: './login/app.js',
-        posts: './posts/app.js'
+        posts: './posts/app.js',
     },
 
     output: {
@@ -106,12 +106,19 @@ let config = {
         new NoGlue(),
 
         new webpack.ProvidePlugin({
-            $:"jquery",
-            Jquery:"jquery",
-            "window.jQuery":"jquery"
+            $: "jquery",
+            Jquery: "jquery",
+            "window.jQuery": "jquery"
         })
     ],
 
+    devServer: {
+        historyApiFallback: {
+            rewrites: [
+                { from: /^\/posts\//, to: '/posts' },
+            ]
+        }
+    },
 };
 
 const favicon = config.context + faviconPath;
