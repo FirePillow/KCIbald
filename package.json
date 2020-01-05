@@ -1,7 +1,7 @@
 {
   "name": "kcibald",
   "version": "0.0.3",
-  "description": "",
+  "description": "fuck mike",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
