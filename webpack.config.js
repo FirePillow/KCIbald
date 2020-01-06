@@ -33,7 +33,8 @@ let config = {
         open_page: './open_page/app.js',
         placeholder: './placeholder/app.js',
         '404': './404/app.js',
-        login: './login/app.js'
+        login: './login/app.js',
+        index: './index/app.js'
     },
 
     output: {
@@ -55,7 +56,7 @@ let config = {
 
             {
                 // Html-loader for webpack to understand what is HTML....
-                // Work with html-webpack-plugin
+                // Work with html-wiebpack-plugin
                 test: /\.html$/,
                 use: 'html-loader'
             },
@@ -110,6 +111,14 @@ let config = {
             "window.jQuery":"jquery"
         })
     ],
+
+    devServer: {
+        historyApiFallback: {
+            rewrites: [
+                {from: /^\/$/, to: '/index/'}
+            ]
+        }
+    }
 
 };
 
