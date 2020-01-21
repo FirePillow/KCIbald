@@ -6,7 +6,7 @@ import open_page from '../components/open_page.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '', component: open_page }
+    { path: '/', component: open_page }
 //    { path: '/posts/r/:regionKey/p/:postKey', component: posts }
 ];
 
@@ -18,6 +18,7 @@ const router = new VueRouter({
 // Have to initialize vue this way,
 // since we're using single file syntax
 new Vue({
-    router,
-    render: h => h(app),
-}).$mount('#app');
+    el: '#app',
+    router: router,
+    render: h => h('router-view'),
+});
