@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div id="searchheader">
         <div id="insidesearch">
             <img id="bald" src="../images/logo.svg" alt="KCIBald!" />
@@ -12,6 +13,10 @@
             </div>
         </div>
     </div>
+    <div id="insideheader">
+        <b>WELCOME TO    </b><img id="bald" src="../images/logo2.svg" alt="KCIBald!" />
+    </div>
+    </div>
 </template>
 
 <script>
@@ -24,9 +29,13 @@
 </script>
 
 <style scoped>
-    body {
-        margin: 0px;
-        background-color: #F5F5F5;
+    #insideheader {
+        font-size: 1.4em;
+        font-family: Arial;
+        text-align: center;
+        background-color: #FFE505;
+        box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+        padding: 40px;
     }
 
     #searchheader {
