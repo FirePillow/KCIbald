@@ -9,7 +9,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 // Extract CSS as file
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Reset output directory
-let CleanerPlugin = require('clean-webpack-plugin');
+let CleanerPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 // Minimize CSS
 let OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // Minimize JS
