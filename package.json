@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/FirePillow/KCIbald#readme",
   "dependencies": {
-    "graphql-request": "^1.8.2",
+    "graphql-request": "^2.0.0",
     "jquery": "^3.4.1",
     "layui-layer": "git+https://github.com/sentsin/layer.git",
     "npm": "^6.9.0",
